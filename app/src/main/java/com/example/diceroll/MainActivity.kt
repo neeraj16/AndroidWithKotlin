@@ -1,5 +1,6 @@
 package com.example.diceroll
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -20,6 +21,11 @@ class MainActivity : AppCompatActivity() {
             rollDice()
         }
         diceImage = findViewById(R.id.dice_image)
+
+        val aboutButton:Button = findViewById(R.id.about_button)
+        aboutButton.setOnClickListener {
+            startActivity(Intent(this, About::class.java))
+        }
     }
 
     private fun rollDice() {
